@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ELITE MOBILES | متجر الموبايلات</title>
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;background:#090909;color:#f8f8f8;
+ font-family:Arial,sans-serif
+}
+:root{--gold:#d4af37;--panel:#151515;--muted:#aaa}
+header{
+ background:#101010;border-bottom:1px solid #34302a;
+ padding:18px 14px;position:sticky;top:0;z-index:5
+}
+.nav{
+ max-width:1100px;margin:auto;display:flex;
+ align-items:center;justify-content:space-between;gap:10px
+}
+.logo{color:var(--gold);font-weight:bold;font-size:20px}
+nav a{color:#ddd;text-decoration:none;margin:0 5px;font-size:13px}
+.hero{
+ text-align:center;padding:48px 18px 38px;
+ background:radial-gradient(ellipse at top,#302711,#090909 70%)
+}
+.hero small{color:var(--gold);letter-spacing:3px}
+.hero h1{font-size:35px;margin:18px 0}
+.hero h1 span{color:var(--gold)}
+.hero p{color:#ccc;line-height:1.9}
+.button{
+ display:inline-block;border:0;border-radius:8px;
+ padding:12px 17px;font-weight:bold;text-decoration:none;
+ cursor:pointer;font-size:14px
+}
+.primary{background:var(--gold);color:#111}
+.outline{border:1px solid var(--gold);color:var(--gold);background:transparent}
+.wrap{max-width:1100px;margin:auto;padding:25px 14px 45px}
+.heading{text-align:center;color:var(--gold);font-size:26px;margin-bottom:8px}
+.sub{text-align:center;color:var(--muted);font-size:14px;line-height:1.8}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0 18px}
+input,select{
+ background:#171717;border:1px solid #444;color:white;
+ padding:13px;border-radius:8px;min-width:0
+}
+#search{flex:1;width:160px}
+.filters{display:flex;gap:8px;overflow-x:auto;padding:4px 0 14px}
+.filters button{
+ white-space:nowrap;border:1px solid #444;background:#171717;
+ color:white;border-radius:20px;padding:10px 15px;cursor:pointer
+}
+.filters button.active{background:var(--gold);color:#111;border-color:var(--gold)}
+.count{color:#aaa;font-size:13px;margin:12px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card{
+ background:linear-gradient(145deg,#1b1b1b,#101010);
+ border:1px solid #303030;border-radius:13px;padding:13px;
+ min-width:0;display:flex;flex-direction:column
+}
+.phone{
+ height:125px;border-radius:9px;
+ background:radial-gradient(ellipse,#38301c,#111);
+ display:flex;align-items:center;justify-content:center;
+ font-size:65px;margin-bottom:12px
+}
+.brand{font-size:11px;color:var(--gold);letter-spacing:1px}
+.card h3{font-size:15px;line-height:1.5;min-height:43px;margin:7px 0}
+.spec{font-size:12px;color:#aaa;line-height:1.8;flex:1}
+.price{color:var(--gold);font-size:17px;font-weight:bold;margin:12px 0}
+.card .button{width:100%;margin-top:7px;text-align:center}
+.note{
+ background:#17150f;border:1px solid #514323;color:#ddd;
+ border-radius:10px;padding:14px;line-height:1.9;
+ font-size:13px;margin-top:25px
+}
+.contact{background:#121212;border-top:1px solid #333;padding:35px 15px;text-align:center}
+.contact p{color:#bbb;line-height:1.9}
+footer{text-align:center;color:#888;font-size:12px;padding:22px}
+.wa{background:#167c48;color:white}
+.empty{text-align:center;color:#bbb;padding:35px;grid-column:1/-1}
+.modal{
+ position:fixed;inset:0;background:#000d;z-index:10;
+ display:none;align-items:center;justify-content:center;padding:15px
+}
+.modal.show{display:flex}
+.dialog{
+ background:#171717;border:1px solid #665323;border-radius:15px;
+ padding:20px;width:100%;max-width:440px;max-height:85vh;overflow:auto
+}
+.dialog h2{color:var(--gold);font-size:22px}
+.close{float:left;background:#333;color:white;border:0;border-radius:6px;padding:7px 12px}
+.details{line-height:2;color:#ddd;font-size:14px}
+.dialog .button{width:100%;text-align:center;margin-top:10px}
+@media(min-width:650px){
+ .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .hero{padding:70px 20px}
+ .hero h1{font-size:48px}
+}
+@media(min-width:950px){
+ .grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="nav">
+  <div class="logo">ELITE MOBILES</div>
+  <nav>
+   <a href="#phones">الموبايلات</a>
+   <a href="#contact">تواصل معنا</a>
+  </nav>
+ </div>
+</header>
+
+<section class="hero">
+ <small>PREMIUM SMARTPHONES</small>
+ <h1>اختار موبايلك <span>بأناقة</span></h1>
+ <p>اكتشف أجهزة أشهر الماركات<br>وقارن المواصفات واختار المناسب ليك.</p>
+ <a class="button primary" href="#phones">اكتشف الأجهزة ↓</a>
+ <a class="button outline" target="_blank" rel="noopener"
+ href="https://wa.me/201152907310?text=%D8%A3%D9%87%D9%84%D8%A7%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B3%D8%A3%D9%84%20%D8%B9%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%D8%A7%D8%AA">
+ واتساب
+ </a>
+</section>
+
+<main class="wrap" id="phones">
+ <h2 class="heading">اكتشف مجموعتنا</h2>
+ <p class="sub">ابحث عن جهازك واضغط عليه لعرض التفاصيل.</p>
+
+ <div class="controls">
+  <input id="search" type="search" placeholder="ابحث عن اسم الموبايل..." oninput="render()">
+  <select id="sort" onchange="render()">
+   <option value="default">الترتيب الافتراضي</option>
+   <option value="low">السعر: من الأقل للأعلى</option>
+   <option value="high">السعر: من الأعلى للأقل</option>
+  </select>
+ </div>
+
+ <div class="filters" id="filters">
+  <button class="active" onclick="setBrand('الكل',this)">الكل</button>
+  <button onclick="setBrand('Samsung',this)">Samsung</button>
+  <button onclick="setBrand('OPPO',this)">OPPO</button>
+  <button onclick="setBrand('HONOR',this)">HONOR</button>
+  <button onclick="setBrand('vivo',this)">vivo</button>
+ </div>
+
+ <div class="count" id="count"></div>
+ <div class="grid" id="products"></div>
+
+ <div class="note">
+  <b>ملاحظة مهمة:</b>
+  الأسعار استرشادية وقد تختلف حسب النسخة والمحل والضمان.
+  تواصل معنا لتأكيد السعر الحالي والتوافر قبل الشراء.
+  الصور المعروضة رموز مؤقتة ويمكن استبدالها بصور الأجهزة الحقيقية.
+ </div>
+</main>
+
+<section class="contact" id="contact">
+ <h2 class="heading">تواصل معانا</h2>
+ <p>عايز تعرف سعر جهاز أو تتأكد من توافره؟<br>ابعتلنا على واتساب مباشرة.</p>
+ <a class="button wa" target="_blank" rel="noopener"
+ href="https://wa.me/201152907310?text=%D8%A3%D9%87%D9%84%D8%A7%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1%20%D8%A7%D9%84%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84%D8%A7%D8%AA">
+ تواصل عبر واتساب ↗
+ </a>
+</section>
+
+<footer>ELITE MOBILES © 2026 — جميع الحقوق محفوظة</footer>
+
+<div class="modal" id="modal" onclick="outsideClose(event)">
+ <div class="dialog">
+  <button class="close" onclick="closeModal()">إغلاق ✕</button>
+  <div id="detailContent"></div>
+ </div>
+</div>
+
+<script>
+const phones = [
+{brand:"Samsung",name:"Galaxy S26 Ultra",price:76490,ram:"12GB",storage:"256GB",screen:"6.9 بوصة تقريبًا",battery:"5000mAh تقريبًا",camera:"كاميرات متعددة متقدمة",network:"5G",chip:"معالج رائد"},
+{brand:"Samsung",name:"Galaxy S26 FE",price:40400,ram:"8GB",storage:"256GB",screen:"راجع النسخة",battery:"راجع النسخة",camera:"كاميرات متعددة",network:"5G",chip:"راجع النسخة"},
+{brand:"Samsung",name:"Galaxy A57 5G",price:30565,ram:"8GB",storage:"256GB",screen:"6.7 بوصة تقريبًا",battery:"5000mAh",camera:"كاميرات متعددة",network:"5G",chip:"راجع النسخة"},
+{brand:"Samsung",name:"Galaxy A37 5G",price:24200,ram:"8GB",storage:"128GB",screen:"6.7 بوصة تقريبًا",battery:"5000mAh",camera:"كاميرات متعددة",network:"5G",chip:"راجع النسخة"},
+{brand:"Samsung",name:"Galaxy A17 4G",price:11420,ram:"4GB",storage:"128GB",screen:"6.7 بوصة تقريبًا",battery:"5000mAh",camera:"كاميرات متعددة",network:"4G",chip:"راجع النسخة"},
+
+{brand:"OPPO",name:"Reno16 5G",price:38999,ram:"12GB",storage:"256GB",screen:"راجع النسخة",battery:"راجع النسخة",camera:"كاميرات متعددة",network:"5G",chip:"راجع النسخة"},
+{brand:"OPPO",name:"Reno16 F 5G",price:28099,ram:"8GB",storage:"256GB",screen:"راجع النسخة",battery:"راجع النسخة",camera:"كاميرات متعددة",network:"5G",chip:"راجع النسخة"},
+{brand:"OPPO",name:"A6 4G",price:13999,ram:"4GB",storage:"128GB",screen:"6.75 بوصة تقريبًا",battery:"راجع النسخة",camera:"كاميرا رئيسية 50MP حسب النسخة",network:"4G",chip:"راجع النسخة"},
+
+{brand:"HONOR",name:"HONOR Magic8 Pro",price:80800,ram:"حسب النسخة",storage:"حسب النسخة",screen:"راجع النسخة",battery:"راجع النسخة",camera:"نظام كاميرات متقدم",network:"5G",chip:"معالج رائد"},
+{brand:"HONOR",name:"HONOR 600",price:32499,ram:"حسب النسخة",storage:"حسب النسخة",screen:"راجع النسخة",battery:"راجع النسخة",camera:"راجع النسخة",network:"راجع النسخة",chip:"راجع النسخة"},
+{brand:"HONOR",name:"HONOR X9d",price:26199,ram:"حسب النسخة",storage:"حسب النسخة",screen:"راجع النسخة",battery:"راجع النسخة",camera:"راجع النسخة",network:"راجع النسخة",chip:"راجع النسخة"},
+
+{brand:"vivo",name:"vivo V70 FE",price:24999,ram:"8GB",storage:"256GB",screen:"راجع النسخة",battery:"راجع النسخة",camera:"راجع النسخة",network:"راجع النسخة",chip:"راجع النسخة"},
+{brand:"vivo",name:"vivo V70",price:33999,ram:"8GB",storage:"256GB",screen:"راجع النسخة",battery:"راجع النسخة",camera:"راجع النسخة",network:"راجع النسخة",chip:"راجع النسخة"},
+{brand:"vivo",name:"vivo Y500",price:18633,ram:"8GB",storage:"256GB",screen:"راجع النسخة",battery:"راجع النسخة",camera:"راجع النسخة",network:"راجع النسخة",chip:"راجع النسخة"}
+];
+
+let selectedBrand = "الكل";
+const whatsapp = "201152907310";
+
+function money(n){
+ return n.toLocaleString("en-US") + " جنيه";
+}
+
+function setBrand(brand,btn){
+ selectedBrand = brand;
+ document.querySelectorAll("#filters button").forEach(b=>b.classList.remove("active"));
+ btn.classList.add("active");
+ render();
+}
+
+function render(){
+ const query = document.getElementById("search").value.trim().toLowerCase();
+ let list = phones.filter(p =>
+  (selectedBrand === "الكل" || p.brand === selectedBrand) &&
+  (p.name + " " + p.brand).toLowerCase().includes(query)
+ );
+
+ const sort = document.getElementById("sort").value;
+ if(sort === "low") list.sort((a,b)=>a.price-b.price);
+ if(sort === "high") list.sort((a,b)=>b.price-a.price);
+
+ document.getElementById("count").textContent = "عدد الأجهزة: " + list.length;
+ const grid = document.getElementById("products");
+
+ if(!list.length){
+  grid.innerHTML = '<div class="empty">مفيش جهاز مطابق لبحثك.</div>';
+  return;
+ }
+
+ grid.innerHTML = list.map(p=>{
+  const i = phones.indexOf(p);
+  return `
+  <article class="card">
+   <div class="phone">📱</div>
+   <div class="brand">${p.brand}</div>
+   <h3>${p.name}</h3>
+   <div class="spec">${p.ram} RAM · ${p.storage}<br>${p.network}</div>
+   <div class="price">${money(p.price)}</div>
+   <button class="button primary" onclick="showDetails(${i})">تفاصيل الجهاز</button>
+   <a class="button outline" target="_blank" rel="noopener" href="${waLink(p)}">اسأل عن السعر</a>
+  </article>`;
+ }).join("");
+}
+
+function waLink(p){
+ const msg = "أهلاً، عايز أعرف السعر الحالي وتوافر " + p.name + " ومواصفاته والضمان.";
+ return "https://wa.me/" + whatsapp + "?text=" + encodeURIComponent(msg);
+}
+
+function showDetails(i){
+ const p = phones[i];
+
+ document.getElementById("detailContent").innerHTML = `
+  <div class="phone">📱</div>
+  <div class="brand">${p.brand}</div>
+  <h2>${p.name}</h2>
+  <div class="price">${money(p.price)}</div>
+  <div class="details">
+   <b>الرام:</b> ${p.ram}<br>
+   <b>المساحة:</b> ${p.storage}<br>
+   <b>الشاشة:</b> ${p.screen}<br>
+   <b>البطارية:</b> ${p.battery}<br>
+   <b>الكاميرا:</b> ${p.camera}<br>
+   <b>الشبكة:</b> ${p.network}<br>
+   <b>المعالج:</b> ${p.chip}<br>
+  </div>
+  <p class="sub">قد تختلف المواصفات والسعر حسب النسخة والسوق. تواصل معنا للتأكد من التفاصيل.</p>
+  <a class="button wa" target="_blank" rel="noopener" href="${waLink(p)}">اسأل عن الجهاز على واتساب</a>
+ `;
+
+ document.getElementById("modal").classList.add("show");
+}
+
+function closeModal(){
+ document.getElementById("modal").classList.remove("show");
+}
+
+function outsideClose(e){
+ if(e.target.id === "modal") closeModal();
+}
+
+render();
+</script>
+</body>
+    </html>
